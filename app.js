@@ -6,7 +6,9 @@ document.getElementById("amigo").focus();
 function agregarAmigo() {
     let txtAmigo = document.getElementById("amigo");
     let amigo = txtAmigo.value;
-
+    
+    document.getElementById("resultado").innerHTML = "";
+    
     if (amigo == "") {
         alert("Ingrese un nombre por favor.");
     } else {
@@ -23,7 +25,8 @@ function sortearAmigo() {
     }
     else {
         const indAleatorio = obtenerNumeroAleatorio(0, amigos.length - 1);
-        document.getElementById("resultado").innerHTML = `<li>${amigos[indAleatorio]}</li>`
+        document.getElementById("resultado").innerHTML = `<li>El amigo secreto es ${amigos[indAleatorio]}</li>`
+        limpiarAmigos();
     }
 }
 
@@ -37,10 +40,9 @@ function mostrarAmigos() {
     }
 }
 
-function limpiarLista() {
+function limpiarAmigos() {
     amigos = [];
     document.getElementById("listaAmigos").innerHTML = "";
-    document.getElementById("resultado").innerHTML = "";
     txtAmigo.value = "";
     txtAmigo.focus();
 }

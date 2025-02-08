@@ -1,3 +1,4 @@
 <h1>Challenge del Amigo Secreto</h1>
 
-Esta pagina permite ingresar personas y sortear aleatoriamente una de estas.
+-Esta pagina permite ingresar nombres en una lista para posteriormente elegir aleatoriamente uno de estas.
+-Una vez elegido el amigo secreto, la lista se limpiará para comenzar nuevamente el juego.
